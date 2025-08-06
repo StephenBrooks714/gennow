@@ -1,80 +1,10 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-    <!-- Font Awesome -->
-    <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../../node_modules/mdb-ui-kit/css/mdb.min.css">
-    <link rel="stylesheet" href="../public/styles/main.css">
-</head>
+<%- include("layouts/header") -%>
 <body>
 
 <header>
-    <nav class="mb-lg-8">
-        <section class="navigation fixed-top">
-            <div class="nav-container">
-                <div class="brand">
-                    <a href="index.html">
-                        <img src="../public/assets/logo.png" heigh="40" width="40" alt="logo" />
-                    </a>
-                </div>
-                <nav>
-                    <div class="nav-mobile">
-                        <a id="nav-toggle" href="#!"><span></span></a>
-                    </div>
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#!">About</a>
-                            <ul class="nav-dropdown">
-                                <li><a href="aboutUs.html">About Us</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#!">Involvement</a>
-                            <ul class="nav-dropdown">
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#!">Programs</a>
-                            <ul class="nav-dropdown">
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#!">Memberships</a>
-                            <ul class="nav-dropdown">
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                                <li><a href="#!">Link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#!" class="btn btn-brown">Donate</a></li>
-                        <li>
-                            <a href="#!" class="fw-bold">Login
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-    </nav>
+    <%- include("layouts/navbar") -%>
 </header>
 
 <main>
@@ -193,7 +123,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/about-section-1.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/about-section-1.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -225,7 +155,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/about-section-2.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/about-section-2.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -256,7 +186,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/about-section-3.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/about-section-3.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -271,7 +201,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/section-4-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/section-4-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -306,7 +236,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/section-5-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/section-5-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -322,7 +252,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/section-6-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/section-6-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -342,7 +272,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/section-7-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/section-7-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -362,7 +292,7 @@
                         </p>
                     </div>
                     <div class="col-lg-5">
-                        <img src="../public/assets/section-8-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
+                        <img src="/assets/section-8-image.png" class="h-100 w-100 shadow-6-strong rounded-5" alt="the owner and board members from the start">
                     </div>
                     <hr class="my-4 w-75 mx-auto">
                     <div class="col-lg-7 mb-lg-0 mb-3">
@@ -383,56 +313,6 @@
 </main>
 
 <!-- Footer -->
-<footer style="background-color: #ffffff;">
-    <hr class="my-4">
-    <div class="container-fluid p-4">
-        <div class="row">
-            <div class="col-lg-2 col-md-6 mb-4">
-                <img src="../public/assets/logo.png" height="45" width="45" alt="footer logo">
-                <h5>Empower <strong>GENNOW</strong></h5>
-                <p>Cincinnati Network</p>
-            </div>
-            <div class="col-lg-5 col-md-6 mb-4">
-                <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">Contact Us</h5>
-                <p>
-                    1776 Mentor Ave., Cincinnati, OH 45212
-                </p>
-                <p>
-                    info@gennowcincy.org
-                </p>
-                <p>
-                    (513) 237-1292
-                </p>
-            </div>
-            <div class="col-lg-5 col-md-6 mb-4">
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">Subscribe</h5>
-                <form action="">
-                    <div data-mdb-input-init class="form-outline mb-3">
-                        <input type="email" id="form2Example1" class="form-control" />
-                        <label class="form-label" for="form2Example1">Email address</label>
-                    </div>
-                    <button class="btn btn-brown">subscribe</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright -->
-</footer>
-<!-- Footer -->
-<script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="../../node_modules/mdb-ui-kit/js/mdb.umd.min.js"></script>
-<script type="text/javascript" src="../public/js/index.js"></script>
+<%- include("layouts/footer") -%>
 </body>
 </html>
