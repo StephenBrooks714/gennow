@@ -12,7 +12,35 @@ const aboutUsPage = (req, res) => {
     });
 }
 
+const ourImpactPage = (req, res) => {
+    res.render('ourImpact', {
+        title: 'Our Impact'
+    });
+}
+
+const ourTeamPage = (req, res) => {
+    res.render('ourTeam', {
+        title: 'Our Team'
+    });
+}
+
+const ourBoardPage = (req, res) => {
+    res.render('ourBoard', {
+        title: 'Our Board'
+    });
+}
+
+const galleryPage = (req, res) => {
+    res.render('gallery', {
+        title: 'GenNOW Gallery'
+    });
+}
+
 module.exports = {
     homePage,
-    aboutUsPage
+    aboutUsPage,
+    ourImpactPage,
+    ourBoardPage,
+    ourTeamPage,
+    galleryPage
 }
