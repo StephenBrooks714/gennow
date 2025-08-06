@@ -2,7 +2,7 @@
 
 const homePage = (req, res) => {
     res.render('index', {
-        title: 'Home Page'
+        title: 'Empower GENNOW - Home Page'
     });
 }
 
