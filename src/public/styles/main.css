@@ -500,7 +500,7 @@ body {
   margin-top: 115px;
   color: #000;
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 }
 .bg-dark-section-1 iframe {
   color: #000;
@@ -534,7 +534,7 @@ body {
 }
 .bg-dark-section-2 img {
   color: #000;
-  margin-top: -5px !important;
+  margin-top: -15px !important;
   height: 387px;
   width: 80%;
 }
@@ -557,8 +557,18 @@ body {
     align-items: center;
     margin-bottom: 4rem;
   }
+  .bg-dark-section-2 iframe {
+    color: #000;
+    margin-top: 15px !important;
+  }
+  .bg-dark-section-2 img {
+    color: #000;
+    margin-top: 15px !important;
+    height: 350px;
+    width: 80%;
+  }
   .bg-dark-section-2 div > p {
-    margin-top: 65px !important;
+    margin-top: -15px !important;
     color: white;
   }
 }
@@ -580,13 +590,13 @@ body {
 }
 .bg-dark-section-3 img {
   color: #000;
-  margin-top: -5px !important;
-  height: 387px;
+  margin-top: -15px !important;
+  height: 350px;
   width: 80%;
 }
-.bg-dark-section-3 div > p {
-  padding-top: 95px;
-  padding-bottom: 35px;
+.bg-dark-section-3 div > div > p {
+  padding-top: 25px;
+  padding-bottom: 5px;
   color: white;
 }
 @media (max-width: 767px) {
@@ -603,8 +613,19 @@ body {
     align-items: center;
     margin-bottom: 4rem;
   }
+  .bg-dark-section-3 iframe {
+    color: #000;
+    margin-top: 15px !important;
+  }
+  .bg-dark-section-3 img {
+    color: #000;
+    margin-top: 20px !important;
+    padding-bottom: -30px;
+    height: 350px;
+    width: 80%;
+  }
   .bg-dark-section-3 div > p {
-    margin-top: 65px !important;
+    margin-top: 35px !important;
     color: white;
   }
 }
