@@ -258,6 +258,11 @@
     border-radius: 50%;
   }
 }
+@media (max-width: 862px) {
+  #sideArt {
+    display: none;
+  }
+}
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
