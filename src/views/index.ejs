@@ -3,24 +3,9 @@
 <%- include("layouts/header") -%>
 <body>
 
-<header>
+<header class="section">
     <%- include("layouts/navbar") -%>
-    <div class="container-fluid">
-        <div class="row flex-row-reverse align-items-center mb-7">
-            <div class="col-md-7">
-                <h1 class="display-5 fw-bold mb-2">
-                    <span class="fadeIn">Empower</span>
-                    <span class="fadeIn delay-1">GENNOW</span>
-                </h1>
-                <p class="h2 fadeIn delay-2 mb-2">
-                    <span class="fw-lighter">The</span> <span class="fw-bold">Cincinnati Network</span>
-                </p>
-            </div>
-            <div class="col-md-5 mb-lg-0 mb-3">
-                <img src="/assets/logo.png" class="img-fluid img-adjust" alt="main logo" />
-            </div>
-        </div>
-    </div>
+    <%- include("impartials/intro") -%>
 </header>
 
 <main>
