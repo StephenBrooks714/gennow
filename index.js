@@ -10,7 +10,6 @@ const compression = require('compression');
 const fileUpload = require('express-fileupload')
 const session = require('express-session');
 const router = require('./data/router/index');
-const userData = require('./data/controllers/users/index');
 
 require('dotenv').config();
 
