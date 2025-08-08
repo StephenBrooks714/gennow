@@ -76,13 +76,8 @@ const port = process.env.PORT;
 app.listen(port || 8000,() => { // changed from app to httpServer
     console.log(`App listening on ${port}`)
 });
-global.loggedIn = null;
-app.use("/", router, compression(), function(req, res) {
 
-    res.redirect("/", {
-        loggedIn: loggedIn()
-    });
-});
+app.use("/", router, compression());
 
 app.use(function(req, res, next){
     res.status(404).render('notFound.ejs', {title: "Sorry, page not found"});
