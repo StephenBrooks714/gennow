@@ -39,7 +39,7 @@ const deleteProjectInfo = (req, res) => {
     res.redirect('/gallery');
 }
 
-const projectsPage = async (req, res) => {
+const galleryPage = async (req, res) => {
     // get images from uploads directory and show them onto page
     const photos = path.join(__dirname, '..', '..', '..', 'src/public/gallery/');
     const photosArray = fs.readdirSync(photos);
@@ -57,5 +57,5 @@ module.exports = {
     newProjectPage,
     storeProject,
     deleteProjectInfo,
-    projectsPage
+    galleryPage
 };

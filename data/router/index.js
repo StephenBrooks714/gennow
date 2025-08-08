@@ -25,6 +25,6 @@ const galleryController = require(".././controllers/forms/mainFormSection");
 router.get("/newProject", cache(2), auth, galleryController.newProjectPage);
 router.post("/store/project", cache(2), galleryController.storeProject);
 router.get("/deleteProject/:id", cache(2), auth, galleryController.deleteProjectInfo);
-router.get("/gallery", cache(2), galleryController.projectsPage);
+router.get("/gallery", cache(2), galleryController.galleryPage);
 
 module.exports = router;

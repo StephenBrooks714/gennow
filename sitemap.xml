@@ -1,51 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.family360coverage.net/</loc>
+    <loc>https://gennow-4b4fc89a574b.herokuapp.com/</loc>
   </url>
   <url>
-    <loc>https://www.family360coverage.net/contact</loc>
+    <loc>https://gennow-4b4fc89a574b.herokuapp.com/aboutUs</loc>
   </url>
   <url>
-    <loc>https://www.family360coverage.net/agency</loc>
+    <loc>https://gennow-4b4fc89a574b.herokuapp.com/ourImpact</loc>
   </url>
   <url>
-    <loc>https://www.family360coverage.net/history</loc>
+    <loc>https://gennow-4b4fc89a574b.herokuapp.com/ourBoard</loc>
   </url>
   <url>
-    <loc>https://www.family360coverage.net/apply</loc>
+    <loc>https://gennow-4b4fc89a574b.herokuapp.com/ourTeam</loc>
   </url>
   <url>
-    <loc>https://www.family360coverage.net/blogs</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/policy</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/terms</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/claims</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/insuranceFacts</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/policyService</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/consumerLogin</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/login</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/registerConsumer</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/singlePost/68741de29a377b640be14bf0</loc>
-  </url>
-  <url>
-    <loc>https://www.family360coverage.net/singlePost/687041460356f2e9d237a49f</loc>
+    <loc>https://gennow-4b4fc89a574b.herokuapp.com/login</loc>
   </url>
 </urlset>

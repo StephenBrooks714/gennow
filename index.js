@@ -17,7 +17,7 @@ require('dotenv').config();
 app.disable('x-powered-by');
 
 
-const generator = SitemapGenerator('https://www.family360coverage.net', {
+const generator = SitemapGenerator('https://gennow-4b4fc89a574b.herokuapp.com', {
     stripQuerystring: false
 });
 // register event listeners
