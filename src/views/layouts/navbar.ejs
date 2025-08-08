@@ -63,11 +63,24 @@
                             </ul>
                         </li>
                         <li><a href="https://www.gofundme.com/f/general-donations-for-generation-now?member=19366961&utm_campaign=p_cp+share-sheet&utm_medium=copy_link_all&utm_source=customer" target="_blank" class="btn btn-brown">Donate</a></li>
-                        <li>
-                            <a href="#!" class="fw-bold">Login
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </li>
+                        <% if(!loggedIn) { %>
+                            <li>
+                                <a href="/login" class="fw-bold">Login
+                                    <i class="fas fa-right-to-bracket"></i>
+                                </a>
+                            </li>
+                        <% } else { %>
+                            <li>
+                                <a href="#!">Users</a>
+                                <ul class="nav-dropdown">
+                                    <li><a href="#!">Dashboard</a></li>
+                                    <li><a href="#!">User Profiles</a></li>
+                                    <hr>
+                                    <li><a href="/logout">Logout <i class="fas fa-right-from-bracket"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        <% } %>
                     </ul>
                 </nav>
             </div>

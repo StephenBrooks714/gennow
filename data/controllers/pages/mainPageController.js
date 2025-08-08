@@ -30,17 +30,10 @@ const ourBoardPage = (req, res) => {
     });
 }
 
-const galleryPage = (req, res) => {
-    res.render('gallery', {
-        title: 'GenNOW Gallery'
-    });
-}
-
 module.exports = {
     homePage,
     aboutUsPage,
     ourImpactPage,
     ourBoardPage,
-    ourTeamPage,
-    galleryPage
+    ourTeamPage
 }

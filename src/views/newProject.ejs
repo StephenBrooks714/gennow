@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header>
+    <%- include('layouts/navbar') -%>
+</header>
+
+<main>
+    <section class="container" style="margin-top: 140px; margin-bottom: 90px;">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-7">
+                <h1 class="mb-4">Gallery Upload</h1>
+                <form action="/store/project" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input type="file" name="photos" class="form-control" multiple accept="image/*" id="image">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MDB -->
+<%- include('layouts/footer') -%>
+</body>
+</html>

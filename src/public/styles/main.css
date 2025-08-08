@@ -282,6 +282,16 @@
 .section #secondary-logo {
   display: none;
 }
+@media (max-width: 1150px) {
+  .section .adjust-content {
+    margin-top: -45px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .section .adjust-content {
+    margin-top: -25px !important;
+  }
+}
 @media (max-width: 992px) {
   .section {
     height: 110vh;

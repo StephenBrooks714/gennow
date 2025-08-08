@@ -181,6 +181,16 @@
   #secondary-logo {
     display: none;
   }
+  @media(max-width:1150px) {
+    .adjust-content {
+      margin-top: -45px!important;
+    }
+  }
+  @media(max-width:1000px) {
+    .adjust-content {
+      margin-top: -25px!important;
+    }
+  }
   @media(max-width: 992px) {
     height: 110vh;
     padding-top: 3px;
