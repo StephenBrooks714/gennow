@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<%- include("layouts/header") -%>
+<body>
+
+<header class="mb-6">
+    <%- include("layouts/navbar") -%>
+</header>
+
+<main>
+    <!-- elements here -->
+    <div class="bg-info" style="height: 20vh;"></div>
+    <div class="container mb-7" style="margin-top: -55px;">
+        <div class="row justify-content-center mb-6">
+            <div class="col-lg-10">
+                <div class="card p-3">
+                    <div class="row">
+                        <div class="col-md-6 mb-lg-0 mb-3">
+                            <h1>Admin Dashboard</h1>
+                            <p>
+                                <a href="#!">Users</a> / <a href="#!">Analytics</a> / <a href="#!">Support</a>
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <p>
+                               <strong>Form Submissions:</strong> <a href="#!">Set</a> Contact Form
+                            </p>
+<!--                           search form -->
+                            <form action="#!">
+                                <div class="input-group">
+                                    <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Home Views</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">0</h6>
+                        <hr>
+                        <a href="#!" class="card-link">Card link</a>
+                        <a href="#!" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Blog Posts</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">0</h6>
+                        <hr>
+                        <a href="#!" class="card-link">New Post</a>
+                        <a href="#!" class="card-link">Manage</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gallery Views</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">0</h6>
+                        <hr>
+                        <a href="/newProject" class="card-link">Add More</a>
+                        <a href="/gallery" class="card-link">Manage</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Members</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">0</h6>
+                        <hr>
+                        <a href="#!" class="card-link">Add New</a>
+                        <a href="#!" class="card-link">Manage All</a>
+                    </div>
+                </div>
+            </div>
+<!--           second section -->
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Admin Users</h5>
+<!--                       show number of active Users from DB -->
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            0
+                        </h6>
+                        <hr>
+                        <a href="#!" class="card-link">Card link</a>
+                        <a href="#!" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sponsors</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">0</h6>
+                        <hr>
+                        <a href="#!" class="card-link">New Post</a>
+                        <a href="#!" class="card-link">Manage</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Programs</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">0</h6>
+                        <hr>
+                        <a href="/newProject" class="card-link">Add More</a>
+                        <a href="/gallery" class="card-link">Manage</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Involvement</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">0</h6>
+                        <hr>
+                        <a href="#!" class="card-link">Add New</a>
+                        <a href="#!" class="card-link">Manage All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Section: Design Block -->
+</main>
+<!-- Footer -->
+<%- include("layouts/footer") -%>
+</body>
+</html>

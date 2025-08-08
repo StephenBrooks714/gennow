@@ -19,6 +19,7 @@ router.get("/logout", cache(2), userActionController.logoutUser);
 router.get("/updateUser/:id", cache(2), auth, userActionController.updateUser);
 router.post("/updateUser/:id", cache(2), userActionController.postUpdatedUser);
 router.get("/deleteUser/:id", cache(2), auth, userActionController.deleteUser);
+router.get("/dashboard", cache(2), auth, userActionController.adminPage);
 
 const galleryController = require(".././controllers/forms/mainFormSection");
 router.get("/newProject", cache(2), auth, galleryController.newProjectPage);

@@ -401,6 +401,10 @@ body {
   }
 }
 
+.brown-bg {
+  background-color: #d3bba1;
+}
+
 .navigation {
   height: 70px;
   background: rgba(244, 244, 244, 0.7);

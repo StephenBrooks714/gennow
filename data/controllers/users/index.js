@@ -93,6 +93,14 @@ const postUpdatedUser = async (req, res) => {
     res.redirect('/')
 }
 
+const adminPage = async (req, res) => {
+    const allUsers = await Users.find({})
+    res.render('dashboard', {
+        title: 'Admin Page',
+        allUsers
+    })
+}
+
 module.exports = {
     deleteUser,
     registerUser,
@@ -101,5 +109,6 @@ module.exports = {
     logoutUser,
     loginUserAction,
     updateUser,
-    postUpdatedUser
+    postUpdatedUser,
+    adminPage
 }
