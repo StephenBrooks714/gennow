@@ -10,11 +10,24 @@ const compression = require('compression');
 const fileUpload = require('express-fileupload')
 const session = require('express-session');
 const router = require('./data/router/index');
+const Visitor = require("./data/controllers/models/VisitorCounter");
 
 require('dotenv').config();
 
 app.disable('x-powered-by');
 
+app.use(async (req, res, next) => {
+    const ipAddress = req.ip;
+    const existingVisitor = await Visitor.findOne({ ipAddress });
+
+    if (!existingVisitor) {
+        // Create a new visitor entry
+        const newVisitor = new Visitor({ ipAddress });
+        await newVisitor.save();
+    }
+
+    next();
+});
 
 const generator = SitemapGenerator('https://gennow-4b4fc89a574b.herokuapp.com', {
     stripQuerystring: false

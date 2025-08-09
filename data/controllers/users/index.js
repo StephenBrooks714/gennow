@@ -1,5 +1,6 @@
 const Users = require("../models/Users");
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const VisitorDB = require("../models/VisitorCounter");
 
 const deleteUser = async (req, res) => {
     await Users.findByIdAndDelete(req.params.id)
@@ -94,10 +95,11 @@ const postUpdatedUser = async (req, res) => {
 }
 
 const adminPage = async (req, res) => {
-    const allUsers = await Users.find({})
+    const allUsers = await Users.find({});
+    const visitorCount = await VisitorDB.countDocuments();
     res.render('dashboard', {
         title: 'Admin Page',
-        allUsers
+        allUsers, visitorCount
     })
 }
 

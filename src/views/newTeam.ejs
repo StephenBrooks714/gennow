@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<%- include("layouts/header") -%>
+<body>
+
+<header>
+    <%- include("layouts/navbar") -%>
+</header>
+
+<main>
+    <!-- elements here -->
+    <div class="container my-5 py-5">
+        <div class="row justify-content-center align-items-center" style="height: 80vh;">
+            <div class="col-lg-7">
+                <form action="/store/team" method="post" enctype="multipart/form-data">
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" name="name" id="name" class="form-control" />
+                        <label class="form-label" for="name">Name</label>
+                    </div>
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" name="role" id="role" class="form-control" />
+                        <label class="form-label" for="role">Role</label>
+                    </div>
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" name="description" id="description" class="form-control" />
+                        <label class="form-label" for="description">Description</label>
+                    </div>
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="url" name="image" id="image" class="form-control" />
+                        <label class="form-label" for="image">Image Url</label>
+                    </div>
+                    <button type="submit" class="btn btn-brown btn-block">Submit <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Section: Design Block-->
+</main>
+<!-- Footer -->
+<%- include("layouts/footer") -%>
+</body>
+</html>

@@ -27,4 +27,18 @@ router.post("/store/project", cache(2), galleryController.storeProject);
 router.get("/deleteProject/:id", cache(2), auth, galleryController.deleteProjectInfo);
 router.get("/gallery", cache(2), galleryController.galleryPage);
 
+const volunteerController = require(".././controllers/forms/volunteerActions");
+router.get("/newVolunteer", cache(2), auth, volunteerController.newVolunteerPage);
+router.post("/store/volunteer", cache(2), volunteerController.storeVolunteer);
+router.get("/deleteVolunteer/:id", cache(2), auth, volunteerController.deleteVolunteer);
+router.post("/updateVolunteer/:id", cache(2), auth, volunteerController.updateVolunteer);
+router.get("/updateVolunteer/:id", cache(2), auth, volunteerController.updateVolunteerPage);
+
+const teamController = require(".././controllers/forms/teamActions");
+router.get("/newTeam", cache(2), auth, teamController.newTeamPage);
+router.post("/store/team", cache(2), teamController.storeTeamMember);
+router.get("/deleteTeam/:id", cache(2), auth, teamController.deleteTeamMember);
+router.post("/updateTeam/:id", cache(2), auth, teamController.updateTeamMember);
+router.get("/updateTeam/:id", cache(2), auth, teamController.updateTeamMemberPage);
+
 module.exports = router;
