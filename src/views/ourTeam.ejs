@@ -59,263 +59,75 @@
                 </div>
             </div>
         </section>
-        <section class="row justify-content-center mb-6">
+        <section class="row mb-6">
             <div class="col-12 mb-3 text-start">
                 <h3 class="display-5">Other <span class="fw-bold text-brown">Teammates</span></h3>
+                <%  if(loggedIn) { %>
+                    <p>
+                        <a href="/newTeam" class="fw-bold text-decoration-underline">Add</a> another team member
+                    </p>
+                <% }%>
             </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/josh_kelly.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Josh "Kosh" Kelly</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Creative Director
-                            </strong>
-                        </p>
+            <% for(i=0; i < team.length; i++) { %>
+                <div class="col-lg-4 mb-3" id="team">
+                    <div class="card shadow-5-strong rounded-5 d-flex flex-column"
+                         style="height: 100%;">
+                        <div class="card-img-top">
+                            <img src="<%= team[i].image %>" class="w-100" alt="<%= team[i].name %>" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title h5"><%= team[i].name %></h4>
+                            <p class="card-text">
+                                <span class="fw-light"><%= team[i].role %></span> <br>
+                                <strong>
+                                    <%= team[i].description %>
+                                </strong>
+                                <% if(loggedIn) { %>
+                                <br>
+                                    <a href="/deleteTeam/<%= team[i]._id %>">
+                                        <i class="fas text-warning fa-trash"></i>
+                                    </a>
+                                <% } %>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/brendan_caine.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Brendan Caine</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Brand Influencer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/andre_whaley.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Andre Whaley</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Photographer/Cinematographer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <% } %>
         </section>
-        <section class="row justify-content-center mb-6">
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/james_bates.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">James Bates</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Video Production Lead
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/seth_holston.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Seth Holston</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Video Director
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/makayla_boyd.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Makayla Boyd</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Production & Content Manager
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="row justify-content-center mb-6">
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/shawdale_thomas.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Shawdale Thomas</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Photographer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/brian_figueroa.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Brian Figueroa</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Creative Team</span> <br>
-                            <strong>
-                                Freelance Audio Editor & Music Composer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/victoria_jamison.png" class="w-100" alt="owner">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Victoria Jamison</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Advance NOW</span> <br>
-                            <strong>
-                                Program Manager
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="row justify-content-center mb-3">
+        <section class="row mb-3">
             <div class="col-12 mb-3 text-start">
-                <h3 class="display-5">Our <span class="fw-bold text-brown">Volunteers</span></h3>
+                <h3 class="display-5" id="volunteers">Our <span class="fw-bold text-brown">Volunteers</span></h3>
+                <%  if(loggedIn) { %>
+                    <p>
+                        <a href="/newVolunteer" class="fw-bold text-decoration-underline">Add</a> another volunteer
+                    </p>
+                <% }%>
             </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column"
-                     style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/becky_luk.png" class="w-100" alt="owner" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Becky Luk</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Website</span> <br>
-                            <strong>
-                                UI/UX Assistance
-                            </strong>
-                        </p>
+            <% for(i=0; i < volunteers.length; i++) { %>
+                <div class="col-lg-4 mb-3">
+                    <div class="card shadow-5-strong rounded-5 d-flex flex-column"
+                         style="height: 100%;">
+                        <div class="card-img-top">
+                            <img src="<%= volunteers[i].image %>" class="w-100" alt="<%= volunteers[i].name %>" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title h5"><%= volunteers[i].name %></h4>
+                            <p class="card-text">
+                                <span class="fw-light"><%= volunteers[i].role %></span> <br>
+                                <strong>
+                                    <%= volunteers[i].description %>
+                                </strong>
+                                <% if(loggedIn) { %>
+                                    <br>
+                                    <a href="/deleteVolunteer/<%= volunteers[i]._id %>">
+                                        <i class="fas fa-trash text-warning"></i>
+                                    </a>
+                                <% } %>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/james_charles.png" class="w-100" alt="owner" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">James Charles</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Website</span> <br>
-                            <strong>
-                                Website Technical Support / Software Developer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/abiola.png" class="w-100" alt="owner" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Abiola J. Olagunju</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Website</span> <br>
-                            <strong>
-                                Website Developer / Engineer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="row justify-content-center mb-3">
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column"
-                     style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/becky_luk.png" class="w-100" alt="owner" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Becky Luk</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Website</span> <br>
-                            <strong>
-                                UI/UX Assistance
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/james_charles.png" class="w-100" alt="owner" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">James Charles</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Website</span> <br>
-                            <strong>
-                                Website Technical Support / Software Developer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <div class="card shadow-5-strong rounded-5 d-flex flex-column" style="height: 100%;">
-                    <div class="card-img-top">
-                        <img src="/assets/abiola.png" class="w-100" alt="owner" style="border-top-left-radius: 7px; border-top-right-radius: 7px;">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title h5">Abiola J. Olagunju</h4>
-                        <p class="card-text">
-                            <span class="fw-light">Website</span> <br>
-                            <strong>
-                                Website Developer / Engineer
-                            </strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <% } %>
         </section>
     </div>
     <!--Section: Design Block-->

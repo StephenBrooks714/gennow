@@ -1,4 +1,6 @@
-//
+// data base
+const TeamInfoData = require('../../controllers/models/Team');
+const VolunteerInfoData = require('../../controllers/models/Volunteers');
 
 const homePage = (req, res) => {
     res.render('index', {
@@ -18,9 +20,12 @@ const ourImpactPage = (req, res) => {
     });
 }
 
-const ourTeamPage = (req, res) => {
+const ourTeamPage = async (req, res) => {
+    const volunteers = await VolunteerInfoData.find({});
+    const team = await TeamInfoData.find({});
     res.render('ourTeam', {
-        title: 'Our Team'
+        title: 'Our Team',
+        team, volunteers
     });
 }
 

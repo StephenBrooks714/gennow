@@ -12,6 +12,7 @@
     <div class="container my-5 py-5">
         <div class="row justify-content-center align-items-center" style="height: 80vh;">
             <div class="col-lg-7 text-center">
+                <h1 class="mb-4">Add A <span class="fw-bold">Volunteer</span></h1>
                 <form action="/store/volunteer" method="post" enctype="multipart/form-data">
                     <div data-mdb-input-init class="form-outline mb-4">
                         <input type="text" name="name" id="name" class="form-control" />
@@ -26,8 +27,7 @@
                         <label class="form-label" for="description">Description</label>
                     </div>
                     <div data-mdb-input-init class="form-outline mb-4">
-                        <input type="url" name="image" id="image" class="form-control" />
-                        <label class="form-label" for="image">Image Url</label>
+                        <input type="file" name="image" id="image" class="form-control" />
                     </div>
                     <button type="submit" class="btn btn-brown btn-block">Submit <i class="fas fa-paper-plane"></i></button>
                 </form>

@@ -7,14 +7,14 @@ const newVolunteerPage = (req, res) => {
 }
 
 const storeVolunteer = async (req, res) => {
-    await VolunteerData.create(req.body, (error, volunteer) => {
-        if (error) {
-            console.log(error);
-            res.redirect('/newVolunteer');
-        } else {
-            console.log('Volunteer has been saved');
-            res.redirect('/ourTeam');
-        }
+    let image = req.files.image;
+    await image.mv(path.resolve(__dirname, '..', '..', '..', 'src/public/uploads', image.name), async (error) => {
+        await VolunteerData.create({
+            ...req.body,
+            image: '/uploads/' + image.name,
+            userid: req.session.userId
+        })
+        res.redirect('/ourTeam#volunteers')
     })
 }
 

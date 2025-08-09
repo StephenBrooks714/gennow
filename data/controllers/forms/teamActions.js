@@ -1,4 +1,5 @@
 const TeamData = require("../models/Team");
+const path = require("path");
 
 const newTeamPage = (req, res) => {
     res.render('newTeam', {
@@ -7,14 +8,14 @@ const newTeamPage = (req, res) => {
 }
 
 const storeTeamMember = async (req, res) => {
-    await TeamData.create(req.body, (error, team) => {
-        if (error) {
-            console.log(error);
-            res.redirect('/newTeam');
-        } else {
-            console.log('Team has been saved');
-            res.redirect('/ourTeam');
-        }
+    let image = req.files.image;
+    await image.mv(path.resolve(__dirname, '..', '..', '..', 'src/public/uploads', image.name), async (error) => {
+        await TeamData.create({
+            ...req.body,
+            image: '/uploads/' + image.name,
+            userid: req.session.userId
+        })
+        res.redirect('/ourTeam#team')
     })
 }
 
