@@ -32,7 +32,7 @@ const storeProject = (req, res) => {
 
 // use shift javascript method to delete the first photo
 const deleteProjectInfo = (req, res) => {
-    const photos = path.join(__dirname, '..', '..', '..', 'src/public/gallery/');
+    const photos = path.join(__dirname, '..', '..', '..', 'src/public/gallery');
     const photosArray = fs.readdirSync(photos);
     const photoToDelete = photosArray.shift();
     fs.unlinkSync(path.join(__dirname, '..', '..', '..', 'src/public/gallery', photoToDelete));
@@ -41,7 +41,7 @@ const deleteProjectInfo = (req, res) => {
 
 const galleryPage = async (req, res) => {
     // get images from uploads directory and show them onto page
-    const photos = path.join(__dirname, '..', '..', '..', 'src/public/gallery/');
+    const photos = path.join(__dirname, '..', '..', '..', 'src/public/gallery');
     const photosArray = fs.readdirSync(photos);
     const photosList = photosArray.map((photo) => ({
         file: `/gallery/${photo}`
