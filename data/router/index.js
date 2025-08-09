@@ -12,9 +12,9 @@ router.get("/ourTeam", cache(2), mainController.ourTeamPage);
 
 const userActionController = require(".././controllers/users/index");
 router.get("/register", cache(2), userActionController.registerUser);
-router.post("/register", cache(2), userActionController.storeUser);
+router.post("/store/user", cache(2), userActionController.storeUser);
 router.get("/login", cache(2), userActionController.loginPage);
-router.post("/login", cache(2), userActionController.loginUserAction);
+router.post("/login/user", cache(2), userActionController.loginUserAction);
 router.get("/logout", cache(2), userActionController.logoutUser);
 router.get("/updateUser/:id", cache(2), auth, userActionController.updateUser);
 router.post("/updateUser/:id", cache(2), userActionController.postUpdatedUser);
