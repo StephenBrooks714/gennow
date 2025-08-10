@@ -41,4 +41,11 @@ router.get("/deleteTeam/:id", cache(2), auth, teamController.deleteTeamMember);
 router.post("/updateTeam/:id", cache(2), auth, teamController.updateTeamMember);
 router.get("/updateTeam/:id", cache(2), auth, teamController.updateTeamMemberPage);
 
+const boardMemberController = require(".././controllers/forms/BoardMemberActions");
+router.get("/newBoardMember", cache(2), auth, boardMemberController.newBoardMemberPage);
+router.post("/store/boardMember", cache(2), boardMemberController.storeBoardMember);
+router.get("/deleteBoardMember/:id", cache(2), auth, boardMemberController.deleteBoardMember);
+router.post("/updateBoardMember/:id", cache(2), auth, boardMemberController.updateBoardMember);
+router.get("/updateBoardMember/:id", cache(2), auth, boardMemberController.updateBoardMemberPage);
+
 module.exports = router;

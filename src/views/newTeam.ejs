@@ -3,15 +3,16 @@
 <%- include("layouts/header") -%>
 <body>
 
-<header>
+<header class="mb-10">
     <%- include("layouts/navbar") -%>
 </header>
 
 <main>
     <!-- elements here -->
     <div class="container my-5 py-5">
-        <div class="row justify-content-center align-items-center" style="height: 80vh;">
-            <div class="col-lg-7">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-7 text-center">
+                <h1 class="mb-4">Add A <span class="fw-bold">Team Member</span></h1>
                 <form action="/store/team" method="post" enctype="multipart/form-data">
                     <div data-mdb-input-init class="form-outline mb-4">
                         <input type="text" name="name" id="name" class="form-control" />
