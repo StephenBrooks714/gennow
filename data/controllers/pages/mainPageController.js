@@ -38,10 +38,24 @@ const ourBoardPage = async (req, res) => {
     });
 }
 
+const programsPage = (req, res) => {
+    res.render('programs', {
+        title: 'Programs'
+    });
+}
+
+const leadershipPage = (req, res) => {
+    res.render('leadership', {
+        title: 'Leadership'
+    });
+}
+
 module.exports = {
     homePage,
     aboutUsPage,
     ourImpactPage,
     ourBoardPage,
-    ourTeamPage
+    ourTeamPage,
+    programsPage,
+    leadershipPage
 }

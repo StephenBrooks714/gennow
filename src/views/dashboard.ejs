@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
 <%- include("layouts/header") -%>
+<style>
+    .intro-height {
+        height: 20vh;
+        @media(max-width: 992px) {
+            margin-top: -60px;
+        }
+    }
+</style>
 <body>
 
 <header class="mb-6">
@@ -9,7 +17,7 @@
 
 <main>
     <!-- elements here -->
-    <div class="bg-info" style="height: 20vh;"></div>
+    <div class="bg-info intro-height"></div>
     <div class="container mb-7" style="margin-top: -55px;">
         <div class="row justify-content-center mb-6">
             <div class="col-lg-10">
