@@ -280,7 +280,7 @@
   overflow: hidden;
 }
 .section .adjust-content {
-  margin-top: -75px !important;
+  margin-top: -85px !important;
 }
 .section img {
   width: 100%;
@@ -303,7 +303,7 @@
 }
 @media (max-width: 992px) {
   .section {
-    height: 80vh;
+    height: 75vh;
     width: 100%;
   }
   .section .adjust-content {

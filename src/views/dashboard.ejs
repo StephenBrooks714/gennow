@@ -26,7 +26,7 @@
                         <div class="col-md-6 mb-lg-0 mb-3">
                             <h1>Admin Dashboard</h1>
                             <p>
-                                <a href="#!">Users</a> / <a href="#!">Analytics</a> / <a href="#!">Support</a>
+                                <a href="/allUsers">Users</a> / <a href="#!">Analytics</a> / <a href="#!">Support</a>
                             </p>
                         </div>
                         <div class="col-md-6 text-end">
@@ -34,12 +34,14 @@
                                <strong>Form Submissions:</strong> <a href="/newContact">Set</a> Contact Form
                             </p>
 <!--                           search form -->
-                            <form action="#!">
-                                <div class="input-group">
-                                    <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-                                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
-                                </div>
-                            </form>
+                            <% for(i=0; i < contact.length; i++) { %>
+                                <p>
+                                   <strong>Set To:</strong> <%= contact[i].adminName %> , <%= contact[i].email %>
+                                    <a href="/deleteContactPreference/<%= contact[i]._id %>">
+                                        <i class="fas text-warning fa-trash-alt"></i>
+                                    </a>
+                                </p>
+                            <% } %>
                         </div>
                     </div>
                 </div>
@@ -85,8 +87,8 @@
                         <h5 class="card-title">Team / Volunteers</h5>
                         <h6 class="card-subtitle mb-2 text-muted">0</h6>
                         <hr>
-                        <a href="/newTeam" class="card-link">Add Team</a>
-                        <a href="/newVolunteer" class="card-link">Add Volunteer</a>
+                        <a href="/newTeam" class="card-link">Team(+)</a>
+                        <a href="/newVolunteer" class="card-link">Volunteer(+)</a>
                     </div>
                 </div>
             </div>
@@ -100,8 +102,8 @@
                             0
                         </h6>
                         <hr>
-                        <a href="#!" class="card-link">Card link</a>
-                        <a href="#!" class="card-link">Another link</a>
+                        <a href="#!" class="card-link">Register</a>
+                        <a href="#!" class="card-link">Manage</a>
                     </div>
                 </div>
             </div>

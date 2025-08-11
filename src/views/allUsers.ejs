@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<%- include("layouts/header") -%>
+<style>
+    html,
+    body,
+    .intro {
+        height: 100vh;
+    }
+    @media(max-width:992px) {
+        .intro {
+            height: 90vh;
+            margin-top: -60px;
+        }
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    tbody td {
+        font-weight: 500;
+        color: #999999;
+    }
+</style>
+<body>
+
+<header>
+    <%- include("layouts/navbar") -%>
+</header>
+
+<main>
+    <section class="intro">
+        <div class="bg-image h-100" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/tables/img1.jpg');">
+            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0,.35);">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <nav class="mb-3">
+                                <a href="/dashboard" class="text-white text-decoration-underline fw-bold"><i class="fas fa-arrow-left-long"></i> Dashboard</a>
+                            </nav>
+                            <div class="table-responsive bg-white" data-mdb-perfect-scrollbar="true" style="position: relative; height: 445px;">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">NAME</th>
+                                        <th scope="col">USERNAME</th>
+                                        <th scope="col">START DATE</th>
+                                        <th scope="col">CONTACTS</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <% for(i=0; i < allUserData.length; i++) { %>
+                                        <tr>
+                                            <th scope="row" style="color: #666666;"><%= allUserData[i].fName %> <%= allUserData[i].lName %></th>
+                                            <td><%= allUserData[i].username %></td>
+                                            <td><%= allUserData[i].joinedDate.toLocaleString() %></td>
+                                            <td><%= allUserData[i].email %></td>
+                                            <td>
+                                                <a href="/deleteUser/<%= allUserData[i]._id %>">
+                                                    <i class="fas text-danger fa-trash-alt"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <% } %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Footer -->
+<%- include("layouts/footer") -%>
+</body>
+</html>
