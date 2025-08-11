@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header>
+    <%- include('layouts/navbar') -%>
+</header>
+
+<main>
+    <div class="container" style="margin-top: 140px; margin-bottom: 90px;">
+        <section class="row justify-content-center">
+            <div class="col-lg-5 mb-2">
+                <h1 class="h1">Update Contact Form</h1>
+                <p class="text-muted mb-3">This will update who gets the form submissions</p>
+                <form action="/store/contact" method="post" enctype="multipart/form-data">
+                    <label for="adminName">Contact Name</label>
+                    <input type="text" name="adminName" id="adminName" class="form-control mb-2" required />
+                    <label for="email">Contact Email</label>
+                    <input type="email" name="email" id="email" class="form-control mb-3" required />
+                    <button class="btn btn-outline-success" type="submit">upload</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- MDB -->
+<%- include('layouts/footer') -%>
+
+</body>
+</html>

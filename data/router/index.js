@@ -50,4 +50,11 @@ router.get("/deleteBoardMember/:id", cache(2), auth, boardMemberController.delet
 router.post("/updateBoardMember/:id", cache(2), auth, boardMemberController.updateBoardMember);
 router.get("/updateBoardMember/:id", cache(2), auth, boardMemberController.updateBoardMemberPage);
 
+const mainContactFormController = require(".././controllers/forms/contactPreferences");
+router.get("/newContact", cache(2), auth, mainContactFormController.newContactPage);
+router.post("/store/contact", cache(2), mainContactFormController.storeContact);
+router.get("/deleteContactPreference/:id", cache(2), auth, mainContactFormController.deleteContact);
+router.post("/sendForm", cache(2), mainContactFormController.sendForm);
+router.get("/thankYou", cache(2), mainContactFormController.thankYouPage);
+
 module.exports = router;

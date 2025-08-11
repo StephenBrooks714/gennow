@@ -2,10 +2,13 @@
 const TeamInfoData = require('../../controllers/models/Team');
 const VolunteerInfoData = require('../../controllers/models/Volunteers');
 const BoardMemberInfo = require('../../controllers/models/OurBoard');
+const ContactMethod = require("../models/ContactForm");
 
-const homePage = (req, res) => {
+const homePage = async (req, res) => {
+    const contactData = await ContactMethod.find({});
     res.render('index', {
-        title: 'Empower GENNOW - Home Page'
+        title: 'Empower GENNOW - Home Page',
+        contactData
     });
 }
 

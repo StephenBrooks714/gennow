@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body onload="redirect()">
+<header>
+    <%- include('layouts/navbar') -%>
+</header>
+<div class="container" style="margin-top: 110px; margin-bottom: 70px;">
+    <div class="row justify-content-center flex-center text-center">
+        <div class="col-md-8">
+            <img src="https://t3.ftcdn.net/jpg/02/91/52/22/360_F_291522205_XkrmS421FjSGTMRdTrqFZPxDY19VxpmL.jpg"
+                 class="img-fluid"
+                 alt="page not found"
+            />
+            <h1>Thank You For The Form Submission</h1>
+            <p class="lead mb-3">
+                We'll reach out to you soon for more information regarding your request.
+            </p>
+            <div class="text-primary" id="result"></div>
+        </div>
+    </div>
+</div>
+<!-- MDB -->
+<%- include('layouts/footer') -%>
+<script>
+    function redirect () {
+        setTimeout(myURL, 4000);
+        const result = document.getElementById("result");
+        result.innerHTML = "<p> The page will redirect after a delay of 4 seconds</p>";
+    }
+
+    function myURL() {
+        document.location.href = 'http://localhost:3000';
+    }
+</script>
+</body>
+</html>
