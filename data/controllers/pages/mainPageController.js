@@ -53,6 +53,12 @@ const leadershipPage = (req, res) => {
     });
 }
 
+const newPageSetUp = (req, res) => {
+    res.render('newPage', {
+        title: 'New Page Set Up'
+    });
+}
+
 module.exports = {
     homePage,
     aboutUsPage,
@@ -60,5 +66,6 @@ module.exports = {
     ourBoardPage,
     ourTeamPage,
     programsPage,
-    leadershipPage
+    leadershipPage,
+    newPageSetUp
 }

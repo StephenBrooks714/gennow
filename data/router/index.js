@@ -11,6 +11,7 @@ router.get("/ourBoard", cache(2), mainController.ourBoardPage);
 router.get("/ourTeam", cache(2), mainController.ourTeamPage);
 router.get("/programs", cache(2), mainController.programsPage);
 router.get("/leadership", cache(2), mainController.leadershipPage);
+router.get("/newPage", cache(2), auth, mainController.newPageSetUp);
 
 const userActionController = require(".././controllers/users/index");
 router.get("/register", cache(2), userActionController.registerUser);
