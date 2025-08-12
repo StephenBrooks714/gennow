@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header>
+    <%- include('layouts/navbar') -%>
+</header>
+
+<main class="container ">
+    <div class="row justify-content-center flex-row-reverse align-items-center flex-center d-flex mx-auto" style="margin-top: 130px; margin-bottom: 60px;">
+        <h1 class="display-5 fw-bold mb-4 text-center">Create A New Post</h1>
+        <div class="col-lg-8 col-md-7">
+            <form action="/store/post" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="title" class="form-label">Blog Title</label>
+                        <input type="text" name="title" id="title" placeholder="At least 20 characters long" class="form-control mb-3" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="summary" class="form-label">Blog Category</label>
+                        <input type="text" name="category" id="summary" placeholder="name a category" class="form-control mb-3" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="image" class="form-label">Primary Image</label>
+                        <input type="file" name="image" id="image" class="form-control mb-3" required accept="image/*" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="image2" class="form-label">Optional Image</label>
+                        <input type="file" name="image2" id="image2" class="form-control mb-3" required accept="image/*" />
+                    </div>
+                    <div class="col-md-12">
+                        <label for="text" class="form-label">Blog Text</label>
+                        <textarea class="form-control mb-3" id="text" rows="6" name="editordata"></textarea>
+                        <button class="btn btn-primary" type="submit">submit post</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+
+</body>
+</html>

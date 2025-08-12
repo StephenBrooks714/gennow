@@ -31,6 +31,13 @@ router.post("/store/project", cache(2), galleryController.storeProject);
 router.get("/deleteProject/:id", cache(2), auth, galleryController.deleteProjectInfo);
 router.get("/gallery", cache(2), galleryController.galleryPage);
 
+const postActionController = require(".././controllers/forms/mainFormSection");
+router.get("/newPost", cache(2), auth, postActionController.newPostPage);
+router.post("/store/post", cache(2), postActionController.storeBlogPost);
+router.get("/blogs", cache(2), postActionController.blogsPage);
+router.get("/singlePost/:id", cache(2), postActionController.singlePostPage);
+router.get("/deletePost/:id", cache(2), auth, postActionController.deleteBlog);
+
 const volunteerController = require(".././controllers/forms/volunteerActions");
 router.get("/newVolunteer", cache(2), auth, volunteerController.newVolunteerPage);
 router.post("/store/volunteer", cache(2), volunteerController.storeVolunteer);

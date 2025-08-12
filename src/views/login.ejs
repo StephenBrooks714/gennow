@@ -2,12 +2,12 @@
 <html lang="en">
 <%- include('layouts/header') -%>
 <body>
-<header>
+<header class="mb-10">
     <%- include('layouts/navbar') -%>
 </header>
 
-<main class="container">
-    <section class="row justify-content-center align-items-center" style="height: 87vh;">
+<main class="container my-5 py-5">
+    <section class="row justify-content-center align-items-center">
         <div class="col-md-5">
             <h1 class="text-center">Admin Only Login</h1>
             <form action="/login/user" method="POST" enctype="multipart/form-data">

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header class="mb-10">
+    <%- include('layouts/navbar') -%>
+</header>
+
+<div class="container my-5 py-5">
+    <div class="row justify-content-center text-center">
+        <div class="col-10 mb-5">
+            <h1 class="font-weight-bold display-4 cursive">Articles & Posts</h1>
+            <p>
+                Read our articles about our tutoring techniques and progress. We have helped so many other people by spreading our knowledge through online media.
+                If you have any inquiries about mentoring or partnering with this organization, <a href="/contact" class="info-text font-weight-bold">contact</a> us today.
+            </p>
+        </div>
+        <% if(posts == "") { %>
+            <h4>There are no blogs posted yet, check back frequently.</h4>
+        <% } else { %>
+            <% for(i=0; i < posts.length; i++) { %>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <a href="/singlePost/<%= posts[i]._id %>">
+                        <div class="card p-3">
+                            <small><%= posts[i].category %></small>
+                            <h2 class="h4 text-info"><%= posts[i].title %></h2>
+                            <p><strong>Posted One:</strong> <%= posts[i].datePosted.toLocaleString() %></p>
+                        </div>
+                    </a>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+</div>
+
+<%- include('layouts/footer') -%>
+</body>
+</html>

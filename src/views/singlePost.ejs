@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<style>
+    .post-intro {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('<%= postData.image %>') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 65vh;
+    }
+</style>
+<body>
+<%- include('layouts/navbar') -%>
+
+<header class="post-intro">
+    <div class="container">
+        <div class="row align-items-center align-items-center text-center justify-content-center" style="height: 65vh;">
+            <div class="col-md-10">
+                <h1 class="display-3 text-white fw-bold"><%= postData.title %></h1>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container" style="margin-top: 60px; margin-bottom: 80px;">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-12 mb-4">
+            <h2 class="h4 fw-bold"><%= postData.title %></h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="black-text" href="/">Home</a><i
+                                class="fas fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item"><a class="black-text" href="/blogs">All Blogs</a><i
+                                class="fas fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+                    <li class="breadcrumb-item active">Current Post</li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <img src="<%= postData.image2 %>" class="img-fluid" alt="<%= postData.title %>">
+        </div>
+
+        <div class="col-md-9 mb-3">
+
+            <p class="lead" id="summernote">
+                <%= postData.editordata %>
+
+            </p>
+            <% if(loggedIn) { %>
+                <p>
+                    <i>Posted By:</i>
+                    Admin
+                </p>
+                <p>
+                    <i>Posted On:</i>
+                    <%= postData.datePosted.toLocaleString() %>
+                </p>
+                <a href="/deletePost/<%= postData._id %>" class="btn btn-outline-warning rounded-pill">delete post</a>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<!-- MDB -->
+<%- include('layouts/footer') -%>
+</body>
+</html>
